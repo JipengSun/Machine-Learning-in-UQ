@@ -10,7 +10,8 @@ myImageVec = reshape((1-myImageInput)',1,784);
 
 %Ensure you have this function 'mnist_example_classifier'
 % saved in working directory - generated from output of nprtool
-myImageOutputs = mnist_example_classifier(myImageVec); 
+%myImageOutputs = mnist_example_classifier(myImageVec); 
+myImageOutputs = MNIST60000_10(myImageVec'); 
 myImageProbabilities=myImageOutputs/sum(myImageOutputs);
 
 %%Show the results
